@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --paragraph: hsl(228, 34%, 66%);
+    --main-text: hsl(0, 0%, 100%);
+    --main-bg: hsl(230, 17%, 14%);
+    --card-bg: hsl(228, 28%, 20%);
+    --card-bg-hover: hsl(228, 28%, 30%);
+    --toggle: hsl(228, 28%, 20%)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    background-color: var(--main-bg);
+    font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.main_container {
+    margin: 36px 162px;
+}
+
+/*--------------------HEADER-------------------*/
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_text {
+    color: var(--main-text);
+}
+
+.header_text h1 {
+    font-size:28px;
+}
+
+.header_text p {
+    color: var(--paragraph);
+    font-size: 14px;
+    margin-top: 3px;
+    letter-spacing: 0.3px;
+    font-weight: 700;
+}
+
+/*----------------Toggle--------------*/
+
+.switch{
+    display: flex;
+    align-items: center;
+    height: 49px;
+}
+
+.switch label{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--paragraph);
+    margin-right: 14px;
+}
+
+.switch label:hover {
+    cursor: pointer;
+}
+
+input[type="checkbox"]{
+    width: 48px;
+    height: 24px;
+    border-radius: 22px;
+    appearance: none;
+    background-image: linear-gradient(
+  90deg,
+  hsl(210deg 78% 56%) 0%,
+  hsl(201deg 100% 47%) 15%,
+  hsl(198deg 100% 47%) 25%,
+  hsl(195deg 100% 47%) 32%,
+  hsl(191deg 100% 45%) 39%,
+  hsl(186deg 100% 42%) 46%,
+  hsl(178deg 100% 40%) 56%,
+  hsl(171deg 100% 41%) 67%,
+  hsl(163deg 100% 42%) 82%,
+  hsl(146deg 68% 55%) 100%
+);
+    position: relative;
+}
+
+input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+
+input::after{
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background-color: var(--toggle);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: all 0.2s ease-in;
+}
+
+input:checked:after {
+    left: 27px;
+}   
+
+/*--------------------FOLLOWERS-------------------*/
+
+.followers_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 46px;
+    margin-inline: 3px;
+}
+
+.card_followers {
+    background-color: var(--card-bg);
+    width: 255px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card_followers:hover {
+    cursor: pointer;
+    background-color: var(--card-bg-hover);
+}
+
+.card_followers .decoration{
+    width: 100%;
+    height: 4px;
+}
+
+.facebook {
+    background-color: hsl(208, 92%, 53%);
+}
+
+.twitter {
+    background-color: hsl(203, 89%, 53%);
+}
+.youtube {
+    background-color: hsl(348, 97%, 39%);
+}
+
+.instagram {
+    background-image: linear-gradient(
+        90deg,
+        hsl(37deg 97% 70%) 0%,
+        hsl(30deg 94% 69%) 11%,
+        hsl(22deg 92% 67%) 22%,
+        hsl(15deg 88% 66%) 33%,
+        hsl(7deg 86% 65%) 44%,
+        hsl(360deg 82% 63%) 56%,
+        hsl(352deg 79% 62%) 67%,
+        hsl(344deg 76% 61%) 78%,
+        hsl(337deg 73% 59%) 89%,
+        hsl(329deg 70% 58%) 100%
+      );
+}
+
+.media_followers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px;
+    
+}
+
+.media_followers p {
+    color: var(--paragraph);
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 9px;
+}
+
+.counting{
+    margin-top: 19px;
+}
+
+.counting h2 {
+    font-size: 55px;
+    color: var(--main-text);
+}
+
+.counting p {
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: var(--paragraph);
+}
+
+.att {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 24px;
+}
+
+.att p {
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.green {
+    color: hsl(163, 72%, 41%);
+}
+
+.red {
+    color: hsl(356, 69%, 56%);
+}
+
+/*-----------------OVERVIEW---------------*/
+
+.overview_container {
+    margin-top: 46px;
+}
+
+.overview_container h3{
+    font-size: 24px;
+    color: var(--main-text);
+    margin-left: 4px;
+} 
+
+.card_overview_container{
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 25px;
+    column-gap: 30px;
+}
+
+.card_overview {
+    background-color: var(--card-bg);
+    width: 255px;  ; 
+    border-radius: 5px;
+}
+
+.card_overview:hover {
+    cursor: pointer;
+    background-color: var(--card-bg-hover);
+}
+
+.card_overview_content {
+    margin: 27px 24px;
+    margin-bottom: 19px;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+.media_overview {
+    display: flex;
+    justify-content: space-between;
+}
+
+.media_overview img {
+    margin-right: 7px;
+}
+
+.media_overview p{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--paragraph);
+}
+
+.card_overview h4{
+    margin-top: 20px;
+    font-size: 32px;
+    color: var(--main-text);
+}
+
+.card_overview .att {
+    position: absolute;
+    right: 6px;
+    bottom: 5px;
+    margin: 0;
+}
+
+.attribution {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    color: var(--paragraph);
+}
+
+/*-------------------Mobile Version-------------------*/
+@media (max-width: 900px) {
+    .main_container{
+        margin: 37px 25px;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .header_text {
+
+        padding-bottom: 24px;
+        border-bottom: 0.1px solid rgba(127, 139, 201, 0.3);
+    }
+
+    .header h1{
+        
+        font-size: 24px;
+    }
+
+    .header p {
+        margin-top: 5px;
+        font-size: 13.8px;
+    }
+
+    .switch {
+        margin-top: 3px;
+        justify-content: space-between;
+    }
+
+    .followers_container{
+        margin-top: 27px;
+        row-gap: 24px;
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+    .card_followers {
+        width: 100%;
+        margin-inline: 0;
+    }
+
+    .card_overview{
+        width: 100%;
+    }
+
+    .card_overview h3 {
+        margin: 0;
+    }
+
+    .card_overview_container {
+        margin-top: 27px;
+        row-gap: 16px;
+        max-width: 500px;
+        margin-inline: auto;
+    }
+}
